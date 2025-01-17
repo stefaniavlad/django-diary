@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Diary</title>
+        <link rel="stylesheet" href="{% static 'css/diaryapp.css' %}">
+<!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">-->
+    </head>
+
+    <body>
+        <h1><a href="/">Dear diary …</a></h1>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}<li class="message">{{ message }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        {% block content %}
+        {% endblock content %}
+
+    </body>
+
+</html>

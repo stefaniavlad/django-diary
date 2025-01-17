@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+body {
+    background: url('https://wallpapercave.com/wp/wp12909350.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Chewy', cursive;
+}
+.custom-title{
+    font-family: 'Chewy', cursive;
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+}
+
+.btn-custom {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    font-size: 20px;
+    border-radius: 35px;
+
+}
+.btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-color: white;
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+    transform: translateY(-8px);
+}
+
+img {
+    pointer-events: none;
+    mix-blend-mode: lighten;
+}

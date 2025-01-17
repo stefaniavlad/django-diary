@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+body {
+    background: url('https://wallpapercave.com/wp/wp4720359.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Architects Daughter, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.entry-card {
+    background-color: rgba(255, 255, 255, 0.3);;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.entry-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.entry-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.entry-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.entry-title a:hover {
+    color: grey;
+}
+
+.entry-date {
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 5px;
+}
+
+
+.button-custom {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-family: Chewy, sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button-custom:hover {
+    color: white;
+    border: 2px solid white;
+    backdrop-filter: blur(8px);
+}
+
+#load-more-btn {
+    font-family: Chewy, sans-serif;
+    margin-top: 20px;
+}
+
+
+.container {
+    padding: 30px 15px;
+}
+
+.row {
+    font-family: Chewy, sans-serif;
+    margin-bottom: 20px;
+}
+
+
+.all-browsers {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
