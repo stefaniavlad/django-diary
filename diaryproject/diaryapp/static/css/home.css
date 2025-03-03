@@ -13,7 +13,7 @@ body {
     text-stroke: 2px white;
 }
 
-.btn-custom {
+/*.btn-custom {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     border: none;
@@ -21,9 +21,20 @@ body {
     font-size: 20px;
     border-radius: 35px;
 
-}
-.btn-custom:hover {
+}*/
+
+.btn-custom {
     background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid white;;
+    padding: 25px 25px;
+    font-size: 26px;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
     border-color: white;
     backdrop-filter: blur(8px);
