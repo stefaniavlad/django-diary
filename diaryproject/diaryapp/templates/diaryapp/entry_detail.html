@@ -1,15 +1,29 @@
 {% extends "diaryapp/base.html" %}
+{% load static %}
 
 {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dear Diary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/entry_detail.css' %}">
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <style>
+
+    </style>
+</head>
 <body>
-  <article>
-    <h2>{{ entry.date_created|date:'Y-m-d H:i' }}</h2>
-    <h3>{{ entry.title }}</h3>
-    <p>{{ entry.content }}</p>
-  </article>
-  <p>
-      <a href="{% url 'entry-update' entry.id %}">✍️ Edit</a>
-      <a href="{% url 'entry-delete' entry.id %}">⛔ Delete</a>
-  </p>
+    <div class="entry-container">
+      <article>
+        <h2 class="entry-date">{{ entry.date_created|date:'Y-m-d H:i' }}</h2>
+        <h3 class="entry-title">{{ entry.title }}</h3>
+        <p class="entry-text">{{ entry.content }}</p>
+      </article>
+      <div class="buttons-edit-delete">
+          <a href="{% url 'entry-update' entry.id %}" style="text-decoration: none;" class="entry-edit">✍️ Edit</a>
+          <a href="{% url 'entry-delete' entry.id %}" style="text-decoration: none;" class="entry-delete">⛔ Delete</a>
+      </div>
+    </div>
 </body>
 {% endblock content %}
