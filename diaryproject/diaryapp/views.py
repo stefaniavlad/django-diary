@@ -26,6 +26,7 @@ class EntryDetailView(DetailView):
 class EntryCreateView(SuccessMessageMixin, CreateView):
     model = Entry
     fields = ['title', 'content']
+    template_name = "diaryapp/entry_form.html"
     success_url = reverse_lazy("entry-list")
     success_message = "Your new entry was created!"
 

@@ -17,9 +17,8 @@ body {
     margin: auto;
     width: 45%;
     padding: 40px;
-
     flex-direction: column;
-    justify-content: center; /* Le centrează pe verticală */
+    justify-content: center;
 }
 
 .entry-container:hover {
