@@ -45,7 +45,7 @@ body {
 
 .entry-date, .entry-title, .entry-text {
     width: 100%;
-    margin-bottom: 15px; /* Adaugă spațiu între ele */
+    margin-bottom: 15px;
 }
 
 .entry-edit{

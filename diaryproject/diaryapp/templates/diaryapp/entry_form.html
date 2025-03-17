@@ -1,34 +1,33 @@
 {% load static %}
-
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Journal Entries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dear Diary - New Entry</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/entry_form.css' %}">
     <script src="https://unpkg.com/htmx.org@1.9.5"></script>
 </head>
+
 <body>
-{% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <div id="entry-container" class="entry-container">
+        <h2 class="form-title">Edit your journal entry</h2>
 
-        <!-- Adăugăm div-ul care conține butoanele -->
-        <div class="form-buttons">
-            <input type="submit" value="Save">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
 
-            {% if entry %}
-                <a href="{% url 'entry-detail' entry.id %}">
-                    <button>Cancel</button>
-                </a>
-            {% else %}
-                <a href="{% url 'entry-list' %}">
-                    <button>Cancel</button>
-                </a>
-            {% endif %}
-        </div>
-    </form>
-{% endblock content %}
+            <div class="buttons-edit-delete">
+                <button type="submit" class="entry-edit" style="text-decoration: background: none; none;">✍️ Edit</button>
+
+                {% if entry %}
+                    <a href="{% url 'entry-detail' entry.id %}" class="entry-delete"
+                       style="border: none; background: none; color: red; cursor: pointer;"> ⛔ Delete </a>
+                {% else %}
+                    <a href="{% url 'entry-list' %}" class="entry-delete"
+                       style="border: none; background: none; color: red; cursor: pointer;"> ⛔ Delete </a>
+                {% endif %}
+            </div>
+        </form>
+    </div>
 </body>
-</html>
+
